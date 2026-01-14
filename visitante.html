@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anotações</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/sa.png" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <aside>
+            <div class="icone"><img src="./img/icone.png" alt=""></div>
+            <h1 class="aside-title">Notas Digitais</h1>
+            <h2 class="aside-sub-title">Organize suas ideias</h2>
+
+            <button id="add-note-button">+ Criar Nota</button>
+
+            <p class="aside-sub-title">Categoria</p>
+            <button class="filters" id="All-categorys">Todos</button>
+            <button class="filters" id="work-category">Trabalho</button>
+            <button class="filters" id="personal-category">Pessoal</button>
+            <button class="filters" id="idea-category">Ideias</button>
+            <button class="filters" id="studies-category">Estudo</button>
+
+            <div class="division-line"></div>
+
+            <div class="counter-container">
+                <p class="counter-name">Total de Notas</p>
+                <p class="totalCounter">0</p>
+            </div>
+            <div class="counter-container">
+                <p class="counter-name">Fixadas</p>
+                <p class="fixedCounter">0</p>
+            </div>
+
+        </aside>
+        <div class="substitute"></div>
+        <section class="notes-section">
+            <div class="notes-section-content">
+                <input type="text" placeholder="Buscar pelo Título da Nota" id="search-notes">
+                <div id="without-note-section">
+                    <div class="without-note-icon"><img src="./img/icone2.png" alt=""></div>
+                    <h1 class="whithout-note-title">Comece criando sua primeira nota</h1>
+                    <p class="whithout-note-subtitle">Clique no botão "+ Criar Nota" para começar</p>
+                </div>
+                <div class="fixed"></div>
+                <div class="notes"></div>
+            </div>
+        </section>
+        <section id="add-note-section">
+            <div id="add-note-content">
+                <div class="header-add-note">
+                    <button id="exit">Voltar</button>
+                    <h1 class="form-title">Nova Nota</h1>
+                </div>
+                <form id="add-note-form">
+                    <label>
+                        <p>Título</p>
+                        <input type="text" name="note-title" required>
+                    </label>
+                    <div class="category-fixed-container">
+                        <label>
+                            <p>Categoria</p>
+                            <select id="note-category">
+                                <option>Trabalho</option>
+                                <option>Pessoal</option>
+                                <option>Ideias</option>
+                                <option>Estudos</option>
+                            </select>
+                        </label>
+                        <label>
+                            <p>Fixar</p>
+                            <button type="button" id="fix-note" class="note-unfixed">Fixar no topo</button>
+                        </label>
+                    </div>
+                    <label>
+                        <p>Conteúdo</p>
+                        <textarea name="note-text" id="" required></textarea>
+                    </label>
+                    <div>
+                        <button type="submit" id="save-note">Salvar</button>
+                        <button type="button" id="cancel-note">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="./js/visitante.js"></script>
+</body>
+
+</html>
